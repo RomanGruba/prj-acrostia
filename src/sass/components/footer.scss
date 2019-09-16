@@ -1,0 +1,16 @@
+.footer {
+    background-color: #68a097;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    .social-icons-list {
+        width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .footer-socials {
+        width: 320px;
+    }
+}

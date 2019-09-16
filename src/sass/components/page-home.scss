@@ -1,0 +1,147 @@
+.page-home {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // max-height: 100%;
+  // max-width: auto;
+  background-image: url('../images/bg-home-pic@1X.png'),
+    url('../images/bg-home@1X.png');
+
+  // position: relative;
+
+  .nav-item:nth-of-type(1) {
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(256, 256, 256, 0.1);
+  }
+}
+
+.section-home {
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 71px);
+
+  z-index: -1;
+}
+
+.slider__content {
+  width: 65%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 34px 70px 34px 40px;
+
+  background-color: $color__slider-content--background;
+}
+
+.slider__button--back,
+.slider__button--forward {
+  width: 34px;
+  height: 56px;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.slider-nav {
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7%;
+
+  &__point {
+    display: block;
+    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color__slider-content--background;
+
+    &:nth-of-type(3) {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color__slider-content--background-hovered;
+      cursor: pointer;
+    }
+  }
+}
+
+.content__message {
+  font-family: 'Lato';
+  font-style: normal;
+  padding: 0 10px;
+  vertical-align: center;
+  color: $color__slider-content--foreground;
+}
+
+.message1 {
+  flex: 1 1 363px;
+  width: 43.2%;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: right;
+}
+
+.message2 {
+  flex: 1 1 346px;
+  width: 41.2%;
+  font-weight: 900;
+  font-size: 104px;
+  line-height: 104px;
+}
+
+@media screen and (max-width: 991px) {
+  .slider__content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px;
+    margin: 0 auto;
+    height: 15vh;
+  }
+
+  .message1,
+  .message2 {
+    text-align: center;
+    align-content: center;
+    height: 33%;
+    width: 100%;
+  }
+
+  .message1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .message2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .message1 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .message2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
